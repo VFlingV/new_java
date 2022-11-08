@@ -24,6 +24,5 @@ public class task_3 {
         int max = Collections.max(listNum);
         int min = Collections.min(listNum);
         System.out.println("max = " + max + "\n"+ "min = " + min + "\n" + "average = " + average);
-
     }
 }

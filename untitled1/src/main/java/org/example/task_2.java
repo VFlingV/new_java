@@ -26,7 +26,5 @@ public class task_2 {
         }
         System.out.println(listNum);
         System.out.println(resultNum);
-
-
     }
 }
