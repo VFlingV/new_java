@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class task_2 {
     public static void main(String[] args) {
         Scanner rd= new Scanner(System.in);
-        System.out.println("Введите элемент функцию: ");
+        System.out.println("Введите комманду (enqueue/first/dequeue): ");
         String command = rd.next();
         Queue<Integer> ls = new LinkedList<>();
         int dip = 10;
