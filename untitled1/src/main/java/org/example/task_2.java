@@ -13,6 +13,9 @@ import java.util.Scanner;
  */
 public class task_2 {
     public static void main(String[] args) {
+        Scanner rd= new Scanner(System.in);
+        System.out.println("Введите элемент функцию: ");
+        String command = rd.next();
         Queue<Integer> ls = new LinkedList<>();
         int dip = 10;
         int a = 5;
@@ -20,40 +23,24 @@ public class task_2 {
             ls.add(i);
         }
 
-        System.out.println("результат метода enqueue " + enqueue(ls));
+        if (command.equals("enqueue")){
+            Scanner read = new Scanner(System.in);
+            System.out.println("Введите элемент который хотите переместить : ");
+            a = read.nextInt();
+            ls.remove(a);
+            ls.add(a);
+            System.out.println("результат метода enqueue " + ls);
 
-        System.out.println("результат метода dequeue " + dequeue(ls));
-        ls.remove(dequeue(ls));
-        System.out.println(ls);
+        } else if ((command.equals("first"))) {
+            int b = ls.peek();
+            System.out.println("результат метода first " + ls.peek());
+            System.out.println(ls);
 
-        System.out.println(ls.peek());
-        System.out.println(ls);
-
-
-
-    }
-
-    public static<Integer> Queue<java.lang.Integer> enqueue(Queue<java.lang.Integer> list){
-        Scanner read = new Scanner(System.in);
-        System.out.println("Введите элемент который хотите переместить : ");
-
-        int a = read.nextInt();
-        list.remove(a);
-        list.add(a);
-    return list;
-    }
-
-    public static<Integer> int first(Queue<java.lang.Integer> list){
-
-        int a = list.peek();
-        return a;
-
-    }
-
-    public static<Integer> int dequeue(Queue<java.lang.Integer> list){
-
-        int a = list.poll();
-        return a;
+        } else if ((command.equals("dequeue"))) {
+            int c = ls.poll();
+            System.out.println("результат метода dequeue " + c);
+            System.out.println(ls);
+        }
 
     }
 
